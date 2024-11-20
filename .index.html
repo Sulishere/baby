@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sul</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 20%;
+            margin: 0;
+        }
+        #title {
+            font-size: 60px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        audio {
+            display: none;
+        }
+        #instagram-link {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff4081;
+            text-decoration: none;
+        }
+        #instagram-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="title">Sul</div>
+    <audio id="bg-music" autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    </audio>
+
+    <a id="instagram-link" href="https://www.instagram.com/yourusername" target="_blank">Go to My Instagram</a>
+
+    <script>
+        // Play the music as soon as the page loads
+        const audio = document.getElementById('bg-music');
+        audio.play();
+
+        // When clicking on the title, show the Instagram link
+        const title = document.getElementById('title');
+        title.addEventListener('click', function() {
+            document.getElementById('instagram-link').style.display = 'inline-block';
+        });
+    </script>
+
+</body>
+</html>
